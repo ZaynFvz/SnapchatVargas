@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Necesitamos permisos para acceder a tu albúm de fotos</string>
 </dict>
 </plist>
