@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9049D731473905E3E8A0F360 /* Pods_GonzaloSnapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD75D3B66418B02B3FC5AF3 /* Pods_GonzaloSnapchat.framework */; };
+		F49206402A33BA5C0099CFCE /* CrearUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492063F2A33BA5C0099CFCE /* CrearUsuarioViewController.swift */; };
 		F4C205CE2A30C06B0061A409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C205CD2A30C06B0061A409 /* AppDelegate.swift */; };
 		F4C205D02A30C06B0061A409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C205CF2A30C06B0061A409 /* SceneDelegate.swift */; };
 		F4C205D22A30C06B0061A409 /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C205D12A30C06B0061A409 /* iniciarSesionViewController.swift */; };
@@ -25,6 +26,7 @@
 		66D47FE2FB117D59C2DCCFAB /* Pods-GonzaloSnapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GonzaloSnapchat.debug.xcconfig"; path = "Target Support Files/Pods-GonzaloSnapchat/Pods-GonzaloSnapchat.debug.xcconfig"; sourceTree = "<group>"; };
 		BF4802B7A973B983ACE35EC5 /* Pods-GonzaloSnapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GonzaloSnapchat.release.xcconfig"; path = "Target Support Files/Pods-GonzaloSnapchat/Pods-GonzaloSnapchat.release.xcconfig"; sourceTree = "<group>"; };
 		CAD75D3B66418B02B3FC5AF3 /* Pods_GonzaloSnapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GonzaloSnapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F492063F2A33BA5C0099CFCE /* CrearUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearUsuarioViewController.swift; sourceTree = "<group>"; };
 		F4C205CA2A30C06B0061A409 /* GonzaloSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GonzaloSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C205CD2A30C06B0061A409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C205CF2A30C06B0061A409 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				F4C205E52A30DCAC0061A409 /* ImagenViewController.swift */,
 				F4C205E92A30FA340061A409 /* ElegirUsuarioViewController.swift */,
 				F4C205D12A30C06B0061A409 /* iniciarSesionViewController.swift */,
+				F492063F2A33BA5C0099CFCE /* CrearUsuarioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				F4C205CE2A30C06B0061A409 /* AppDelegate.swift in Sources */,
 				F4C205D02A30C06B0061A409 /* SceneDelegate.swift in Sources */,
 				F4C205E62A30DCAC0061A409 /* ImagenViewController.swift in Sources */,
+				F49206402A33BA5C0099CFCE /* CrearUsuarioViewController.swift in Sources */,
 				F4C205EA2A30FA340061A409 /* ElegirUsuarioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
