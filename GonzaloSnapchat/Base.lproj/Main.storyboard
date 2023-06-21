@@ -167,18 +167,48 @@
                                     <constraint firstAttribute="height" constant="219" id="LUe-BF-nE0"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tienes un mensaje de voz😄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgU-Lb-Suq">
+                                <rect key="frame" x="91.5" y="450" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeO-eh-7NI">
+                                <rect key="frame" x="132" y="496" width="150" height="59"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="reproaudio" title="Reproducir">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reproducirAudio:" destination="dLp-SM-FW7" eventType="touchUpInside" id="jhL-eK-60h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nota:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-nT-13t">
+                                <rect key="frame" x="50" y="597" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ps6-gT-5uR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vtk-T8-3a4" firstAttribute="top" secondItem="wL7-Sj-mmK" secondAttribute="bottom" constant="25" id="BpW-0T-26a"/>
+                            <constraint firstItem="B6c-nT-13t" firstAttribute="leading" secondItem="Ps6-gT-5uR" secondAttribute="leading" constant="50" id="JZg-av-eR6"/>
+                            <constraint firstItem="B6c-nT-13t" firstAttribute="top" secondItem="XeO-eh-7NI" secondAttribute="bottom" constant="42" id="Qav-kg-WP4"/>
                             <constraint firstItem="wL7-Sj-mmK" firstAttribute="top" secondItem="Ps6-gT-5uR" secondAttribute="top" constant="15" id="QuI-Gs-CDb"/>
+                            <constraint firstItem="NgU-Lb-Suq" firstAttribute="centerX" secondItem="dGS-Yo-Swk" secondAttribute="centerX" id="SmA-IU-Lyz"/>
                             <constraint firstItem="dKn-hl-GTA" firstAttribute="top" secondItem="vtk-T8-3a4" secondAttribute="bottom" constant="25" id="T9E-te-4no"/>
+                            <constraint firstItem="Ps6-gT-5uR" firstAttribute="trailing" secondItem="B6c-nT-13t" secondAttribute="trailing" constant="50" id="UWi-SN-zLb"/>
                             <constraint firstItem="vtk-T8-3a4" firstAttribute="leading" secondItem="Ps6-gT-5uR" secondAttribute="leading" constant="5" id="V5m-8c-zrq"/>
+                            <constraint firstItem="XeO-eh-7NI" firstAttribute="centerX" secondItem="dGS-Yo-Swk" secondAttribute="centerX" id="Z4C-8Q-c8O"/>
+                            <constraint firstItem="B6c-nT-13t" firstAttribute="centerX" secondItem="dGS-Yo-Swk" secondAttribute="centerX" id="ZSF-22-aUY"/>
+                            <constraint firstItem="NgU-Lb-Suq" firstAttribute="top" secondItem="dKn-hl-GTA" secondAttribute="bottom" constant="68" id="eDV-Mu-UwN"/>
                             <constraint firstItem="dKn-hl-GTA" firstAttribute="centerX" secondItem="dGS-Yo-Swk" secondAttribute="centerX" id="h4S-Bm-AIT"/>
                             <constraint firstItem="wL7-Sj-mmK" firstAttribute="leading" secondItem="Ps6-gT-5uR" secondAttribute="leading" constant="5" id="hGq-5H-Fh9"/>
                             <constraint firstItem="Ps6-gT-5uR" firstAttribute="trailing" secondItem="dKn-hl-GTA" secondAttribute="trailing" constant="10" id="uv0-8y-TBR"/>
                             <constraint firstItem="wL7-Sj-mmK" firstAttribute="width" secondItem="vtk-T8-3a4" secondAttribute="width" id="w37-7k-jAv"/>
+                            <constraint firstItem="XeO-eh-7NI" firstAttribute="top" secondItem="NgU-Lb-Suq" secondAttribute="bottom" constant="25" id="wVb-cm-tYJ"/>
                             <constraint firstItem="dKn-hl-GTA" firstAttribute="leading" secondItem="Ps6-gT-5uR" secondAttribute="leading" constant="10" id="zyf-WG-uSQ"/>
                         </constraints>
                     </view>
@@ -186,6 +216,7 @@
                     <connections>
                         <outlet property="imageView" destination="dKn-hl-GTA" id="BHw-Il-Jpg"/>
                         <outlet property="lblMensaje" destination="wL7-Sj-mmK" id="E4Y-jT-I7J"/>
+                        <outlet property="lblmensajeVoz" destination="B6c-nT-13t" id="Dlp-MQ-Ii0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvm-qW-flP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,30 +244,72 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOE-U9-Nmj">
-                                <rect key="frame" x="87" y="273" width="240" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grabar un mensaje de voz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkG-10-fgW">
+                                <rect key="frame" x="102" y="349" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOx-YS-Opz">
+                                <rect key="frame" x="137" y="400" width="140" height="59"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="grabaraudio" title="GRABAR">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="GrabarAudio:" destination="39C-og-KTk" eventType="touchUpInside" id="CmX-U9-BcU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-Eu-Bax">
+                                <rect key="frame" x="117" y="477" width="180" height="59"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="reproaudio" title="REPRODUCIR">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ReproducirAudio:" destination="39C-og-KTk" eventType="touchUpInside" id="rzj-Ri-hAv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribir mensaje..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GS6-qv-gSP">
+                                <rect key="frame" x="87" y="561" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrx-tM-WBR">
+                                <rect key="frame" x="117" y="640" width="180.5" height="35.5"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Elegir Contacto">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="19"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ENVIAR MENSAJE">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="elegirContactoTapped:" destination="39C-og-KTk" eventType="touchUpInside" id="dUl-dC-YvA"/>
+                                    <action selector="elegirContactoTapped:" destination="39C-og-KTk" eventType="touchUpInside" id="n45-if-JxI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8K-JO-XDN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nHu-Fs-tLN" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="20y-nf-fyk"/>
+                            <constraint firstItem="zB8-Eu-Bax" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="4Xm-u2-ceX"/>
+                            <constraint firstItem="g8K-JO-XDN" firstAttribute="trailing" secondItem="GS6-qv-gSP" secondAttribute="trailing" constant="87" id="5ad-jn-hhX"/>
+                            <constraint firstItem="zB8-Eu-Bax" firstAttribute="top" secondItem="GOx-YS-Opz" secondAttribute="bottom" constant="18" id="8dw-I6-nHy"/>
+                            <constraint firstItem="lrx-tM-WBR" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="DJr-Bi-fWA"/>
                             <constraint firstItem="nHu-Fs-tLN" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="Ho3-iz-VhV"/>
-                            <constraint firstItem="bOE-U9-Nmj" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="IYG-TN-y8b"/>
                             <constraint firstItem="nHu-Fs-tLN" firstAttribute="top" secondItem="11p-vS-7VP" secondAttribute="bottom" constant="15" id="Nls-DR-vQK"/>
-                            <constraint firstItem="bOE-U9-Nmj" firstAttribute="width" secondItem="nHu-Fs-tLN" secondAttribute="width" id="Oxq-ak-24j"/>
-                            <constraint firstItem="bOE-U9-Nmj" firstAttribute="top" secondItem="nHu-Fs-tLN" secondAttribute="bottom" constant="20" id="Vyp-Gm-Veq"/>
+                            <constraint firstItem="GS6-qv-gSP" firstAttribute="leading" secondItem="g8K-JO-XDN" secondAttribute="leading" constant="87" id="OgV-9N-u8W"/>
+                            <constraint firstItem="GS6-qv-gSP" firstAttribute="top" secondItem="zB8-Eu-Bax" secondAttribute="bottom" constant="25" id="Seb-2j-BzK"/>
                             <constraint firstItem="11p-vS-7VP" firstAttribute="width" secondItem="nHu-Fs-tLN" secondAttribute="width" id="Xgv-Hw-4e9"/>
+                            <constraint firstItem="IkG-10-fgW" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="XxO-es-nmm"/>
                             <constraint firstItem="11p-vS-7VP" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="c04-xm-spo"/>
+                            <constraint firstItem="GOx-YS-Opz" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="c6q-xG-TPB"/>
+                            <constraint firstItem="lrx-tM-WBR" firstAttribute="top" secondItem="GS6-qv-gSP" secondAttribute="bottom" constant="45" id="dmf-uo-tek"/>
+                            <constraint firstItem="GS6-qv-gSP" firstAttribute="centerX" secondItem="pyf-zL-c6p" secondAttribute="centerX" id="lRm-xL-EpY"/>
                             <constraint firstItem="11p-vS-7VP" firstAttribute="top" secondItem="g8K-JO-XDN" secondAttribute="top" constant="20" id="odM-HD-gCy"/>
+                            <constraint firstItem="IkG-10-fgW" firstAttribute="top" secondItem="nHu-Fs-tLN" secondAttribute="bottom" constant="96" id="sqb-Kl-HG8"/>
+                            <constraint firstItem="GOx-YS-Opz" firstAttribute="top" secondItem="IkG-10-fgW" secondAttribute="bottom" constant="30" id="xnS-8Z-t7H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Enviar Mensaje" id="MHI-vh-Fn1">
@@ -247,9 +320,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnGrabar" destination="GOx-YS-Opz" id="tr0-JQ-bGT"/>
+                        <outlet property="btnReproducir" destination="zB8-Eu-Bax" id="qy3-7K-LpT"/>
                         <outlet property="descripcionTextField" destination="nHu-Fs-tLN" id="u9Z-Ew-Ej6"/>
-                        <outlet property="elegirContactoBoton" destination="bOE-U9-Nmj" id="GBB-iz-xIM"/>
+                        <outlet property="elegirContactoBoton" destination="lrx-tM-WBR" id="bdk-ZZ-kS1"/>
                         <outlet property="imageView" destination="11p-vS-7VP" id="DZC-2U-zhe"/>
+                        <outlet property="txtMensajeAudio" destination="GS6-qv-gSP" id="rjc-Sn-fJg"/>
                         <segue destination="3Lw-ao-QYs" kind="show" identifier="seleccionarContactoSegue" id="fgZ-jt-1ij"/>
                     </connections>
                 </viewController>
@@ -392,7 +468,9 @@
     </scenes>
     <resources>
         <image name="crearusuario" width="180" height="180"/>
+        <image name="grabaraudio" width="45" height="45"/>
         <image name="icon-256x256" width="180" height="180"/>
+        <image name="reproaudio" width="45" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -401,6 +479,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
